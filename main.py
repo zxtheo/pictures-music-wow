@@ -3,14 +3,20 @@ from service.image_service import get_image_data
 from service.note_maker_service import make_notes
 from service.music_service import play_music
 from multiprocessing import Process
+import sys
 
-pitch = 'b'
-length = 'r'
+pitch = 'r'
+length = 'b'
 rest = 'g'
-bpm = 200
+bpm = 180
+arguments = sys.argv[1:]
+img = arguments[0]
+pitch = arguments[1]
+length = arguments[2]
+bpm = int(arguments[3])
 
 def main():
-    img = "better_deep_fried_doge.jpg"
+
     img_values = get_image_data(img).to_list()
     #print (img_values)
     music_score1 = make_notes(img_values, pitch, length, rest, bpm)

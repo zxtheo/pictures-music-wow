@@ -1,5 +1,4 @@
 #music_service
-import winsound, time
 from pysine import sine
 
 def play_music(music_score):
@@ -9,3 +8,5 @@ def play_music(music_score):
 
 def test(pitch, length):
     winsound.Beep(pitch, length)
+
+
