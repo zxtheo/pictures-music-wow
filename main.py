@@ -1,19 +1,25 @@
 #main.py
 from service.image_service import get_image_data
-import math
 from service.note_maker_service import make_notes
 from service.music_service import play_music
+from multiprocessing import Process
+
 pitch = 'b'
 length = 'r'
 rest = 'g'
-bpm = 100
+bpm = 200
 
 def main():
-    img = "doge.jpg"
+    img = "better_deep_fried_doge.jpg"
     img_values = get_image_data(img).to_list()
     #print (img_values)
-    music_score = make_notes(img_values, pitch, length, rest, bpm)
-    play_music(music_score)
+    music_score1 = make_notes(img_values, pitch, length, rest, bpm)
+    play_music(music_score1)
+    # music_score2 = make_notes(img_values, 'g', 'r', 'b', bpm)
+    # play_music(music_score2)
+    
+
+    
 
 
     # frequency_map = {

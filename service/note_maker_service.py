@@ -24,11 +24,11 @@ def get_rest(n, bpm):
 
 def get_note_length(n, bpm):
     lengths = {
-        "0":int((60/4/bpm)/4 * 1000), #1/4
-        "1":int((60/4/bpm)/2 * 1000), #1/2
-        "2":int((60/4/bpm)   * 1000), #1
-        "3":int((60/4/bpm)*2 * 1000), #2
-        "4":int((60/4/bpm)*4 * 1000)  #4
+        "0":(60/4/bpm)/4, #1/4
+        "1":(60/4/bpm)/2, #1/2
+        "2":(60/4/bpm)  , #1
+        "3":(60/4/bpm)*2, #2
+        "4":(60/4/bpm)*4  #4
     }
 
     return lengths[str(round(n/63))]
