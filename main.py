@@ -5,10 +5,7 @@ from service.music_service import play_music
 from multiprocessing import Process
 import sys
 
-pitch = 'r'
-length = 'b'
 rest = 'g'
-bpm = 180
 arguments = sys.argv[1:]
 img = arguments[0]
 pitch = arguments[1]
@@ -18,11 +15,9 @@ bpm = int(arguments[3])
 def main():
 
     img_values = get_image_data(img).to_list()
-    #print (img_values)
     music_score1 = make_notes(img_values, pitch, length, rest, bpm)
     play_music(music_score1)
-    # music_score2 = make_notes(img_values, 'g', 'r', 'b', bpm)
-    # play_music(music_score2)
+
     
 
     
