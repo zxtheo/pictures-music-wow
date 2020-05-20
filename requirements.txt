@@ -1,0 +1,4 @@
+pyAudio
+pillow
+pysine
+MIDIUtil

@@ -44,6 +44,5 @@ def create_midi(bpm, score, name, track_length):
     midif.write_to_file()
     
 
-
     # add some notes
     
