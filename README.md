@@ -20,16 +20,24 @@ $ aplaymidi -l
  Port    Client name                      Port name
  14:0    Midi Through                     Midi Through Port-0
 ```
-I will pick 14:0 as my device for these examples.
+I will pick 14:0 as my device for these examples, using the built in doge.jpg image.
 
 In docker:
 ```
 docker run --rm zxtheo/pictures-music-wow doge.jpg | aplaymidi -p 14:0 -
 ```
+And to render mypic.jpg which is outside the container.
+```
+docker run --rm -i zxtheo/pictures-music-wow - - </path/to/mypic.jpg | aplaymidi -p 14:0 -
+```
 
 On a Linux system:
 ```
 python3 main.py doge.jpg g b 180 - | aplaymidi -p 14:0 -
+```
+or
+```
+python3 main.py /path/to/mypic.jpg g b 180 - | aplaymidi -p 14:0 -
 ```
 
 Will run the container for 3 minutes playing music derived from picture doge.jpg in the data directory.
