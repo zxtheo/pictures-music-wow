@@ -17,16 +17,10 @@ out = arguments[4] if len(arguments)>4 and arguments[4] != "" else "test"
 def main():
 
     img_values = get_image_data(img).to_list()
-<<<<<<< HEAD
     music_score1 = make_notes(img_values, pitch, length, rest, bpm, True)
     music_score2 = make_notes(img_values, 'r', 'b', rest, bpm, False)
-    create_midi(bpm, [music_score1, music_score2], "test", 120)
-=======
-    music_score1 = make_notes(img_values, pitch, length, rest, bpm)
-    music_score2 = make_notes(img_values, 'r', 'b', rest, bpm)
     # play_music(music_score1)
     create_midi(bpm, [music_score1, music_score2], out, 120)
->>>>>>> 46dfc3c6c0369459791b5ab89479f62ecb4ddcae
 
 
         
