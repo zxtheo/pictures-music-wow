@@ -12,7 +12,7 @@ class trackData:
 
 
     def set_channel(self, channel, program):
-        self.mf.addProgramChange(1, channel, 0, program)
+        self.mf.addProgramChange(0, channel, 0, program)
 
     def write_to_file(self):
         with open("{}.midi".format(self.name), 'wb') as output_file:
