@@ -12,6 +12,7 @@ img = arguments[0]
 pitch = arguments[1]
 length = arguments[2]
 bpm = int(arguments[3])
+out = arguments[4] if arguments[4] else "test"
 
 def main():
 
@@ -19,7 +20,7 @@ def main():
     music_score1 = make_notes(img_values, pitch, length, rest, bpm)
     music_score2 = make_notes(img_values, 'r', 'b', rest, bpm)
     # play_music(music_score1)
-    create_midi(bpm, [music_score1, music_score2], "test", 120)
+    create_midi(bpm, [music_score1, music_score2], out, 120)
 
     
 

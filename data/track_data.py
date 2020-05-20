@@ -14,9 +14,7 @@ class trackData:
     def set_channel(self, channel, program):
         self.mf.addProgramChange(1, channel, 0, program)
 
-    def write_to_file(self):
-        with open("{}.midi".format(self.name), 'wb') as output_file:
+    def write_to_file(self, f):
+        with (os.fdopen(os.dup(sys.stdout.fileno()), 'wb') if name == '-'
+            else open("{}.midi".format(self.name), 'wb')) as output_file:
             self.mf.writeFile(output_file)
-
-    
-
