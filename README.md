@@ -33,11 +33,11 @@ docker run --rm -i zxtheo/pictures-music-wow - - </path/to/mypic.jpg | aplaymidi
 
 On a Linux system:
 ```
-python3 main.py doge.jpg g b 180 - | aplaymidi -p 14:0 -
+python3 main.py doge.jpg g b 300 - | aplaymidi -p 14:0 -
 ```
 or
 ```
-python3 main.py /path/to/mypic.jpg g b 180 - | aplaymidi -p 14:0 -
+python3 main.py /path/to/mypic.jpg g b 300 - | aplaymidi -p 14:0 -
 ```
 
 Will run the container for 3 minutes playing music derived from picture doge.jpg in the data directory.
