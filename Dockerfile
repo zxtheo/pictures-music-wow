@@ -2,7 +2,7 @@ FROM python:3
 
 RUN [ -z $HTTP_PROXY ] || echo "Acquire::http::Proxy \"${HTTP_PROXY}\";"    > /etc/apt/apt.conf.d/mcafee-proxy
 RUN apt-get update
-RUN apt-get install -y portaudio19-dev python3-pyaudio python3-pillow python3-midiutil
+RUN apt-get install -y portaudio19-dev
 RUN rm -rf /var/lib/apt/lists
 
 COPY requirements.txt ./

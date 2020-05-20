@@ -1,7 +1,7 @@
 #main.py
 from service.image_service import get_image_data
 from service.note_maker_service import make_notes
-from service.music_service import play_music
+#from service.music_service import play_music
 from service.midi_service import create_midi
 from multiprocessing import Process
 import sys
@@ -22,6 +22,4 @@ def main():
     # play_music(music_score1)
     create_midi(bpm, [music_score1, music_score2], out, 120)
 
-
-        
 main()
