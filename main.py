@@ -17,8 +17,9 @@ def main():
 
     img_values = get_image_data(img).to_list()
     music_score1 = make_notes(img_values, pitch, length, rest, bpm)
+    music_score2 = make_notes(img_values, 'r', 'b', rest, bpm)
     # play_music(music_score1)
-    create_midi(bpm, music_score1)
+    create_midi(bpm, [music_score1, music_score2], "test", 120)
 
     
 
