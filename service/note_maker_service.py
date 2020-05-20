@@ -42,7 +42,7 @@ def get_note_length(n, bpm, bass):
             "1":0.5, #1/2
             "2":1  , #1
             "3":2, #2
-            "4":4  #4
+            "4":1  #4
         }
 
     return lengths[str(round(n/63))]
