@@ -4,11 +4,13 @@
 
 In docker environment: `docker build -t zxtheo/pictures-music-wow .`
 
-In normal environment:
+In normal Linux environment:
 ```
-apt-get install -y portaudio19-dev python3-pyaudio python3-pillow python3-midiutil
+apt-get install -y portaudio19-dev
 pip3 install --proxy=${HTTP_PROXY} --no-cache-dir -r requirements.txt
 ```
+
+On Windows the pip3 command should work but I don't know if there are other requirements to be able to get pyaudio working...
 
 ## Running
 
