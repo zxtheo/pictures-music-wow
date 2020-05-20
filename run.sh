@@ -1,2 +1,7 @@
 #!/bin/bash
-python3 main.py ${1:-doge.jpg} g b 120 ${2:--}
+f=${1:-doge.jpg}
+[[ $f = - ]] && {
+    f=$(mktemp /tmp/image.XXXXXX).jpg
+    cat >$f
+}
+python3 main.py ${f} ${4:-g} ${5:-b} ${3:-120} ${2:--}
