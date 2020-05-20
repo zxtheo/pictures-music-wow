@@ -1,3 +1,4 @@
 pyAudio
 pillow
 pysine
+MIDIUtil
