@@ -1,10 +1,15 @@
 # pictures-music-wow
 
 Music made from pictures...
+
 Pixels are converted to notes by mapping the pixel values to note pitches and lengths. 
+
 These notes are added to the music score and that score is then passed into the midi making service.
+
 This service is where some musicality is put in, by ensuring that the socre is split up into bars of 4 beats.
+
 It is then exported to MIDI and you can then listen to what your face sounds like (if you put your face in as the input jpg)
+
 Enjoy!
 
 ## Build:
