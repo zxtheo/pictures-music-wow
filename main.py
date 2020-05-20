@@ -2,6 +2,7 @@
 from service.image_service import get_image_data
 from service.note_maker_service import make_notes
 from service.music_service import play_music
+from service.midi_service import create_midi
 from multiprocessing import Process
 import sys
 
@@ -16,7 +17,8 @@ def main():
 
     img_values = get_image_data(img).to_list()
     music_score1 = make_notes(img_values, pitch, length, rest, bpm)
-    play_music(music_score1)
+    # play_music(music_score1)
+    create_midi(bpm, music_score1)
 
     
 
@@ -39,6 +41,24 @@ def main():
     #     "a5":880,
     #     "b5":988,
     #     "c6":1047
+    # }
+
+    # frequency_map = {
+    #     "c4":60,
+    #     "d4":62,
+    #     "e4":64,
+    #     "f4":65,
+    #     "g4":67,
+    #     "a4":69,
+    #     "b4":71,
+    #     "c5":72,
+    #     "d5":74,
+    #     "e5":76,
+    #     "f5":77,
+    #     "g5":79,
+    #     "a5":81,
+    #     "b5":83,
+    #     "c6":84
     # }
 
     # colour_map = {
