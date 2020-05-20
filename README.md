@@ -43,7 +43,7 @@ And to render mypic.jpg which is outside the container.
 docker run --rm -i zxtheo/pictures-music-wow - - </path/to/mypic.jpg | aplaymidi -p 14:0 -
 ```
 
-On a Linux system:
+Without docker, on Linux pipe to aplaymidi to stream:
 ```
 python3 main.py doge.jpg g b 300 - | aplaymidi -p 14:0 -
 ```
@@ -57,5 +57,10 @@ Will run the container for 3 minutes playing music derived from picture doge.jpg
 To save to a file from docker, just redirect the output to a file.
 To save to a file without docker, use:
 ```
-python3 main.py doge.jpg g b 180 outfile.midi
+python3 main.py doge.jpg g b 300 outfile.midi
 ```
+The midi file can then be played in e.g. Windows Media Player or VLC or similar.
+
+The "300" is the tempo, increase this to make the music faster.
+
+The g and b arguments select which primary colours are used for tempo and pitch and should be one of r, g or b.
