@@ -6,8 +6,8 @@ def create_midi(bpm, score, name, track_length):
     # create your MIDI object
     midif = trackData(bpm, name, track_length)
     
-    midif.set_channel(0, 37)
-    midif.set_channel(1, 86)
+    midif.set_channel(0, 1 )
+    midif.set_channel(1, 12 )
     
     track = 0   # the only track
 
