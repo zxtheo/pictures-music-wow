@@ -1,6 +1,4 @@
 #midi_service
-import sys
-import os
 from midiutil.MidiFile import MIDIFile
 from data.track_data import trackData
 

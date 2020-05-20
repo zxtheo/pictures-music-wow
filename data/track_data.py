@@ -1,4 +1,6 @@
 from midiutil.MidiFile import MIDIFile
+import os
+import sys
 
 class trackData:
 
@@ -14,7 +16,7 @@ class trackData:
     def set_channel(self, channel, program):
         self.mf.addProgramChange(1, channel, 0, program)
 
-    def write_to_file(self, f):
-        with (os.fdopen(os.dup(sys.stdout.fileno()), 'wb') if name == '-'
+    def write_to_file(self):
+        with (os.fdopen(os.dup(sys.stdout.fileno()), 'wb') if self.name == '-'
             else open("{}.midi".format(self.name), 'wb')) as output_file:
             self.mf.writeFile(output_file)

@@ -12,7 +12,7 @@ img = arguments[0]
 pitch = arguments[1]
 length = arguments[2]
 bpm = int(arguments[3])
-out = arguments[4] if arguments[4] else "test"
+out = arguments[4] if len(arguments)>4 and arguments[4] != "" else "test"
 
 def main():
 

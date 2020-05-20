@@ -12,5 +12,5 @@ COPY run.sh /
 COPY service /service
 COPY data /data
 
-CMD []
-ENTRYPOINT /run.sh
+#CMD []
+ENTRYPOINT ["/run.sh"]
